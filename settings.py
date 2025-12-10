@@ -24,9 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+4m97_+qn0yzs3vq_^5v(jacgue9vkb_%h7r#rp0z#hi=o5z)n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
 DEBUG = False
-
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # # хост от лица которого мы отправляем сообщения
@@ -41,9 +39,11 @@ DEBUG = False
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
-
-ALLOWED_HOSTS = ["yourusername.pythonanywhere.com"]
-
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "твой-сайт.onrender.com",
+]
 
 # Application definition
 
@@ -64,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

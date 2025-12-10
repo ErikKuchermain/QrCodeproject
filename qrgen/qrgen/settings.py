@@ -24,7 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+4m97_+qn0yzs3vq_^5v(jacgue9vkb_%h7r#rp0z#hi=o5z)n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+DEBUG = False
+
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # # хост от лица которого мы отправляем сообщения
@@ -39,7 +41,8 @@ DEBUG = True
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["yourusername.pythonanywhere.com"]
 
 
 # Application definition
